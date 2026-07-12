@@ -1,0 +1,209 @@
+/* General Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Color Variables for Light and Dark Theme */
+body {
+    background-color: #f4f6f0;
+    color: #333333;
+}
+
+/* Dark Mode Colors Classes */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+:root {
+    --primary-color: #4B5320; /* Army Green */
+    --accent-color: #D4AF37;  /* Gold */
+    --light-card: #ffffff;
+    --dark-card: #1e1e1e;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h2 {
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Dark Mode Button Style */
+.btn-toggle {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Action Buttons */
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #1c220f;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1590235941147-ba0c9b0a8f82?q=80&w=1200') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Content Sections */
+.about-section, .wings-section, .contact-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* Cards (Flexbox) changing according to theme */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--light-card);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+body.dark-theme .card {
+    background-color: var(--dark-card);
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.quote-box .author {
+    color: var(--accent-color);
+}
+
+/* Forms & Validation Styling */
+.join-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.join-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+body.dark-theme .join-form input {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #1c220f;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}
