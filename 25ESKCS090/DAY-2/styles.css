@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+/* Individual Form Group (Spacing) */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* Label Styling */
+.form-group label {
+    display: block;
+    color: #475569;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+/* Text, Email, Password, Date, and Select Inputs Styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 10px 14px; /* Padding inside elements */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px; /* Rounded corners for inputs */
+    font-size: 15px;
+    color: #334155;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Input focus effect */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4f7dff;
+}
+
+/* Radio Button Layout */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 4px;
+}
+
+.radio-group input[type="radio"] {
+    cursor: pointer;
+}
+
+.radio-group .radio-label {
+    display: inline;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 100%;
+    background-color: #4f7dff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth animation toggle */
+    margin-top: 10px;
+}
+
+/* Button Hover Effect pseudo-class */
+.submit-btn:hover {
+    background-color: #16ffbb;
+    color: #1e293b;
+}
