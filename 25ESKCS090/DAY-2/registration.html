@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- External CSS file ko link kiya gaya hai -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST">
+            
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+91 9876543210" required>
+            </div>
+
+            <!-- Gender Field (Radio Buttons) -->
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male" class="radio-label">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="radio-label">Female</label>
+                </div>
+            </div>
+
+            <!-- Date of Birth (DOB) Field -->
+            <div class="form-group">
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <!-- Department Field (Dropdown Menu) -->
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="" disabled selected>Select Department</option>
+                    <option value="cse">Computer Science (CSE)</option>
+                    <option value="it">Information Technology (IT)</option>
+                    <option value="ece">Electronics (ECE)</option>
+                </select>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" minlength="6" required>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm password" minlength="6" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
