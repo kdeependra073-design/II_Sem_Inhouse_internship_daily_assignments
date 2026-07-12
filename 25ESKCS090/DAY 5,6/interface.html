@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Army - Digital Information Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dynamic.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark sticky-top shadow">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-2">
+            <a class="navbar-brand fw-bold tracking-wide" href="#">INDIAN ARMY PORTAL</a>
+            <div class="w-50 my-2 my-md-0">
+                <input type="text" id="searchBar" class="form-control" placeholder="Type here to search regiments or bulletins...">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        
+        <div class="row mb-5">
+            <div class="col-12 border-bottom pb-2 mb-4 d-flex justify-content-between align-items-center">
+                <h2 class="h4 text-success fw-bold">1. Core Regiments & Wings (Loaded from Local JS Array)</h2>
+                <span class="badge bg-success fs-6" id="regimentCount">0 Regiments</span>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="regimentContainer"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 border-bottom pb-2 mb-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <h2 class="h4 text-primary fw-bold">2. Live Strategic Bulletins (Fetched from Online API)</h2>
+                <button id="fetchApiData" class="btn btn-primary btn-sm">Load Live Bulletins</button>
+            </div>
+
+            <div id="statusContainer" class="col-12 d-none"></div>
+
+            <div class="row row-cols-1 row-cols-md-2 g-4" id="apiDataContainer"></div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="m-0 small">&copy; 2026 Indian Army Fan Dashboard | Day 5 & 6 Integrated Submission</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dynamic.js"></script>
+</body>
+</html>
